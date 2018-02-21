@@ -67,10 +67,10 @@ public class CrearNuevoUsuario {
 				}
 			}
 		});
-		btnCrearUsuario.setBounds(74, 205, 118, 23);
+		btnCrearUsuario.setBounds(108, 178, 118, 23);
 		frame.getContentPane().add(btnCrearUsuario);
 		
-		JButton btnNewSalir = new JButton("Salir");
+		JButton btnNewSalir = new JButton("Atr\u00E1s");
 		btnNewSalir.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
@@ -78,7 +78,7 @@ public class CrearNuevoUsuario {
 				
 			}
 		});
-		btnNewSalir.setBounds(232, 205, 89, 23);
+		btnNewSalir.setBounds(331, 217, 89, 23);
 		frame.getContentPane().add(btnNewSalir);
 		
 		//Objetos graficos del programa.
@@ -88,14 +88,14 @@ public class CrearNuevoUsuario {
 		frame.getContentPane().add(lblNombre);
 		
 		JLabel lblApellido = new JLabel("Apellido");
-		lblApellido.setBounds(48, 100, 46, 14);
+		lblApellido.setBounds(198, 31, 46, 14);
 		frame.getContentPane().add(lblApellido);
 		
 		JLabel lblNombreDeUsuario = new JLabel("Nombre de usuario");
-		lblNombreDeUsuario.setBounds(198, 27, 123, 23);
+		lblNombreDeUsuario.setBounds(48, 96, 123, 23);
 		frame.getContentPane().add(lblNombreDeUsuario);
 		
-		JLabel lblContrasena = new JLabel("Contrasena");
+		JLabel lblContrasena = new JLabel("Contraseña");
 		lblContrasena.setBounds(198, 100, 86, 14);
 		frame.getContentPane().add(lblContrasena);
 		
@@ -105,12 +105,12 @@ public class CrearNuevoUsuario {
 		textFieldNombre.setColumns(10);
 		
 		textFieldApellido = new JTextField();
-		textFieldApellido.setBounds(48, 123, 97, 20);
+		textFieldApellido.setBounds(198, 56, 97, 20);
 		frame.getContentPane().add(textFieldApellido);
 		textFieldApellido.setColumns(10);
 		
 		textFieldNombreDeUsuario = new JTextField();
-		textFieldNombreDeUsuario.setBounds(198, 56, 97, 20);
+		textFieldNombreDeUsuario.setBounds(48, 123, 97, 20);
 		frame.getContentPane().add(textFieldNombreDeUsuario);
 		textFieldNombreDeUsuario.setColumns(10);
 		

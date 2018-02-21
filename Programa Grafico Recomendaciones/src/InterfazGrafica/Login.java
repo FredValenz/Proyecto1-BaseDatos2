@@ -56,7 +56,7 @@ public class Login  {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JButton ButtonDeInicio = new JButton("Inicio de sesion");
+		JButton ButtonDeInicio = new JButton("Inicio de sesión");
 		ButtonDeInicio.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -72,7 +72,7 @@ public class Login  {
 	
 					//Para hacer visible la pantalla del programa.
 					
-					Programa prog= new Programa();
+					Catalogo prog= new Catalogo();
 					prog.setVisible(true);
 					
 					//DashboardPrograma dash= new DashboardPrograma();
@@ -81,7 +81,7 @@ public class Login  {
 				
 				else
 				{
-					JOptionPane.showMessageDialog(frame, "Nombre de usuario o contrasena incorrecta");
+					JOptionPane.showMessageDialog(frame, "Nombre de usuario o contrase�a incorrecta");
 				}
 				
 			}
@@ -89,27 +89,27 @@ public class Login  {
 		
 		//Elementos graficos del programa
 		
-		ButtonDeInicio.setBounds(64, 227, 118, 36);
+		ButtonDeInicio.setBounds(147, 178, 157, 36);
 		frame.getContentPane().add(ButtonDeInicio);
 		
 		textFieldCorreoElectronico = new JTextField();
-		textFieldCorreoElectronico.setBounds(68, 85, 247, 20);
+		textFieldCorreoElectronico.setBounds(157, 60, 247, 20);
 		frame.getContentPane().add(textFieldCorreoElectronico);
 		textFieldCorreoElectronico.setColumns(10);
 		
-		lblNombredeUsuario = new JLabel("NombredeUsuario");
+		lblNombredeUsuario = new JLabel("Nombre de Usuario :");
 		lblNombredeUsuario.setFont(new Font("Verdana", Font.BOLD, 12));
-		lblNombredeUsuario.setBounds(68, 39, 145, 25);
+		lblNombredeUsuario.setBounds(15, 58, 145, 25);
 		frame.getContentPane().add(lblNombredeUsuario);
 		
 		textFieldContrasena = new JTextField();
-		textFieldContrasena.setBounds(68, 176, 247, 20);
+		textFieldContrasena.setBounds(157, 125, 247, 20);
 		frame.getContentPane().add(textFieldContrasena);
 		textFieldContrasena.setColumns(10);
 		
-		lblContrasena = new JLabel("Contrasena");
+		lblContrasena = new JLabel("Contrase\u00F1a :");
 		lblContrasena.setFont(new Font("Verdana", Font.BOLD, 12));
-		lblContrasena.setBounds(68, 138, 145, 25);
+		lblContrasena.setBounds(15, 123, 145, 25);
 		frame.getContentPane().add(lblContrasena);
 		
 		btnCrearNuevoUsuario = new JButton("Crear nuevo usuario");
@@ -121,7 +121,7 @@ public class Login  {
 				nu.ScreenNuevoUsuario();
 			}
 		});
-		btnCrearNuevoUsuario.setBounds(204, 227, 157, 36);
+		btnCrearNuevoUsuario.setBounds(147, 227, 157, 36);
 		frame.getContentPane().add(btnCrearNuevoUsuario);
 	}
 }

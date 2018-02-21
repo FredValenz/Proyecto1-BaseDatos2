@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
+import java.awt.Font;
 
 public class DashboardPrograma {
 
@@ -43,28 +45,37 @@ public class DashboardPrograma {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JButton btnCatalogoDePeliculas = new JButton("Catalogo de peliculas");
+		JButton btnCatalogoDePeliculas = new JButton("Catálogo de películas");
 		btnCatalogoDePeliculas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnCatalogoDePeliculas.setBounds(143, 51, 157, 23);
+		btnCatalogoDePeliculas.setBounds(125, 64, 157, 23);
 		frame.getContentPane().add(btnCatalogoDePeliculas);
 		
-		JButton btnMisPeliculas = new JButton("Mis Peliculas");
+		JButton btnMisPeliculas = new JButton("Mis Películas");
 		btnMisPeliculas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnMisPeliculas.setBounds(143, 85, 157, 23);
+		btnMisPeliculas.setBounds(125, 116, 157, 23);
 		frame.getContentPane().add(btnMisPeliculas);
 		
-		JButton btnPeliculasRecomendadas = new JButton("Peliculas Recomendadas");
+		JButton btnPeliculasRecomendadas = new JButton("Películas Recomendadas");
 		btnPeliculasRecomendadas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		btnPeliculasRecomendadas.setBounds(143, 119, 157, 23);
+		btnPeliculasRecomendadas.setBounds(125, 166, 157, 23);
 		frame.getContentPane().add(btnPeliculasRecomendadas);
+		
+		JLabel lblInicio = new JLabel("Inicio");
+		lblInicio.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblInicio.setBounds(183, 13, 56, 16);
+		frame.getContentPane().add(lblInicio);
+		
+		JButton btnCerrarSesion = new JButton("Cerrar Sesi\u00F3n");
+		btnCerrarSesion.setBounds(309, 215, 111, 25);
+		frame.getContentPane().add(btnCerrarSesion);
 	}
 }
