@@ -60,10 +60,7 @@ public class Catalogo extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnComprar = new JButton("Comprar");
-		btnComprar.setBounds(60, 217, 89, 23);
-		contentPane.add(btnComprar);
-		
+			
 		JLabel lblCatalogodePeliculas = new JLabel("Cat\u00E1logo de Pel\u00EDculas");
 		lblCatalogodePeliculas.setFont(new Font("Times New Roman", Font.PLAIN, 20));
 		lblCatalogodePeliculas.setBounds(120, 13, 179, 24);
@@ -122,5 +119,20 @@ public class Catalogo extends JFrame {
 		}
 		
 		scrollPane.setColumnHeaderView(table);
+		
+		JButton btnComprar = new JButton("Comprar");
+		btnComprar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				table.getSelectedRow();
+				
+			
+				
+			}
+		});	
+	
+		btnComprar.setBounds(60, 217, 89, 23);
+		contentPane.add(btnComprar);
+		
 	}
 }

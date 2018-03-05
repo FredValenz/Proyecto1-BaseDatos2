@@ -63,44 +63,19 @@ public class BaseDatos {
 		return result;
 	}
 	
-	public void insert(Object x) {
+	public void insert(Usuario x) {
 	
 		
 		Statement stm = null;
 		
-		if (x instanceof Usuario)
-		{
-			Usuario user = (Usuario)x;
-			try{ 
-				stm = getConnection().createStatement(); //me permite hacer el query de una manera que la DB pueda preprocesarlo
-				stm.executeUpdate("insert into user (nombre, apellido, username, password) values ('"
-				 + user.getNombre() + "','" + user.getApellido() + "','" + user.getUsername() + "','" + user.getPassword() + "');" );
-		
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-			
+		try{ 
+			stm = getConnection().createStatement(); //me permite hacer el query de una manera que la DB pueda preprocesarlo
+			stm.executeUpdate("insert into user (nombre, apellido, username, password) values ('"
+			 + x.getNombre() + "','" + x.getApellido() + "','" + x.getUsername() + "','" + x.getPassword() + "');" );
+	
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
-		else if (x instanceof Pelicula)
-		{
-			Pelicula peli = (Pelicula)x;
-			
-			/*try{ 
-				stm = getConnection().createStatement(); //me permite hacer el query de una manera que la DB pueda preprocesarlo
-				stm.executeUpdate("insert into user_movie(user_id, Movie_id) values ('"
-				 + peli.getUser_id() + "','" + peli.getMovie_id() + "');" );
-		
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}*/
-			
-			
-			
-			
-			
-		}
-		
-		
 		
 	
 

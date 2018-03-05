@@ -85,14 +85,14 @@ public class BaseDatos {
 		{
 			Pelicula peli = (Pelicula)x;
 			
-			/*try{ 
+			try{ 
 				stm = getConnection().createStatement(); //me permite hacer el query de una manera que la DB pueda preprocesarlo
 				stm.executeUpdate("insert into user_movie(user_id, Movie_id) values ('"
 				 + peli.getUser_id() + "','" + peli.getMovie_id() + "');" );
 		
 			} catch (SQLException e) {
 				e.printStackTrace();
-			}*/
+			}
 			
 			
 			
