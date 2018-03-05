@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;InterfazGrafica.m&apos; to &apos;mis_peliculas&apos;&#x0A;- Original project: &apos;Programa Grafico Recomendaciones&apos;&#x0A;- Original element: &apos;InterfazGrafica.m&apos;&#x0A;- Renamed element: &apos;InterfazGrafica.mis_peliculas&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;m&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;InterfazGrafica{mis_peliculas.java[m" matchStrategy="1" name="mis_peliculas" qualified="false" references="true" similarDeclarations="false" stamp="1520204298171" textual="false" version="1.0"/>
+</session>

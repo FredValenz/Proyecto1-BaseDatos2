@@ -8,11 +8,14 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JButton;
 
-public class m extends JFrame {
+public class mis_peliculas extends JFrame {
 
 	private JPanel contentPane;
 	private JTable table;
@@ -24,7 +27,7 @@ public class m extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					m frame = new m();
+					mis_peliculas frame = new mis_peliculas();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -36,7 +39,7 @@ public class m extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public m() {
+	public mis_peliculas() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -60,8 +63,25 @@ public class m extends JFrame {
 		btnRate.setBounds(62, 217, 97, 25);
 		contentPane.add(btnRate);
 		
-		JButton btnBack = new JButton("Back");
-		btnBack.setBounds(301, 217, 97, 25);
-		contentPane.add(btnBack);
+		JButton btnAtras = new JButton("Atras");
+		btnAtras.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				//setVisible(false);
+				dispose();
+				
+				
+				//Comando para mostrar pantalla de log in
+				//Login LogIn= new Login();
+				//login = new Login();
+				//login.setVisible(true);
+				
+				DashboardPrograma programa = new DashboardPrograma();
+				programa.setVisible(true);
+				
+			}
+		});
+		btnAtras.setBounds(301, 217, 97, 25);
+		contentPane.add(btnAtras);
 	}
 }

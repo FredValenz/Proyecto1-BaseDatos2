@@ -62,6 +62,23 @@ public class BaseDatos {
 		
 		return result;
 	}
+	
+	public void insert(Usuario x) {
+	
+		
+		Statement stm = null;
+		
+		try{ 
+			stm = getConnection().createStatement(); //me permite hacer el query de una manera que la DB pueda preprocesarlo
+			stm.executeUpdate("insert into user (nombre, apellido, username, password) values ('"
+			 + x.getNombre() + "','" + x.getApellido() + "','" + x.getUsername() + "','" + x.getPassword() + "');" );
+	
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	
 
 
+}
 }

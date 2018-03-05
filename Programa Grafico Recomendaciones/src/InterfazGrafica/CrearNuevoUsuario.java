@@ -4,6 +4,10 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JTextField;
+
+import conexionBD.BaseDatos;
+import conexionBD.Usuario;
+
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -18,6 +22,9 @@ public class CrearNuevoUsuario {
 	private JTextField textFieldApellido;
 	private JTextField textFieldNombreDeUsuario;
 	private JTextField textFieldContrasena;
+	
+	Usuario user = new Usuario();
+	BaseDatos BD = new BaseDatos();
 
 	/**
 	 * Launch the application.
@@ -56,10 +63,20 @@ public class CrearNuevoUsuario {
 		btnCrearUsuario.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
+			
 				String nombre = textFieldNombre.getText();
 				String apellido = textFieldApellido.getText();
 				String nombredeusuario = textFieldNombreDeUsuario.getText();
 				String contrasena = textFieldContrasena.getText();
+				
+				user.setNombre(textFieldNombre.getText());
+				user.setApellido(textFieldApellido.getText());
+				user.setUsername(textFieldNombreDeUsuario.getText());
+				user.setPassword(textFieldContrasena.getText());
+				
+				BD.insert(user);
+				JOptionPane.showMessageDialog(frame, "Datos agregados.");
+
 				
 				if(nombre.equals("") || apellido.equals("") || nombredeusuario.equals("") || contrasena.equals(""))
 				{

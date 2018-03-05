@@ -90,8 +90,27 @@ public class Rate extends JFrame {
 		btnAte.setBounds(12, 187, 97, 25);
 		contentPane.add(btnAte);
 		
-		JButton btnBack = new JButton("Back");
-		btnBack.setBounds(243, 187, 97, 25);
-		contentPane.add(btnBack);
+		JButton btnAtras = new JButton("Atras");
+		
+		btnAtras.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				//setVisible(false);
+				dispose();
+				
+				
+				//Comando para mostrar pantalla de log in
+				//Login LogIn= new Login();
+				//login = new Login();
+				//login.setVisible(true);
+				
+				mis_peliculas pelicula = new mis_peliculas();
+				pelicula.setVisible(true);
+				
+			}
+		});
+		
+		btnAtras.setBounds(243, 187, 97, 25);
+		contentPane.add(btnAtras);
 	}
 }

@@ -47,7 +47,7 @@ public class DashboardPrograma extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton btnCatalogoDePeliculas = new JButton("Catalogo de peliculas");
+		JButton btnCatalogoDePeliculas = new JButton("Peliculas");
 		btnCatalogoDePeliculas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -62,6 +62,15 @@ public class DashboardPrograma extends JFrame {
 		contentPane.add(btnCatalogoDePeliculas);
 		
 		JButton btnMisPeliculas = new JButton("Mis peliculas");
+		btnMisPeliculas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				dispose();
+				
+				mis_peliculas peliculas = new mis_peliculas();
+				peliculas.setVisible(true);
+			}
+		});
 		btnMisPeliculas.setBounds(156, 82, 162, 23);
 		contentPane.add(btnMisPeliculas);
 		
